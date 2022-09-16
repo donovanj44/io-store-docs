@@ -1,7 +1,46 @@
 <h3>Container TOC data</h3>
 
-    ```cpp
-    // I/O Store TOC header
+<details>
+    
+<summary>Container TOC data</summary>
+    
+```cpp
+struct FIoStoreTocResource
+{
+    enum { CompressionMethodNameLen = 32 };
+
+    FIoStoreTocHeader Header;
+
+    TArray<FIoChunkId> ChunkIds;
+
+    TArray<FIoOffsetAndLength> ChunkOffsetLengths;
+
+    TArray<int32> ChunkPerfectHashSeeds;
+
+    TArray<int32> ChunkIndicesWithoutPerfectHash;
+
+    TArray<FIoStoreTocCompressedBlockEntry> CompressionBlocks;
+
+    TArray<FName> CompressionMethods;
+
+    FSHAHash SignatureHash;
+
+    TArray<FSHAHash> ChunkBlockSignatures;
+
+    TArray<FIoStoreTocEntryMeta> ChunkMetas;
+
+    TArray<uint8> DirectoryIndexBuffer;
+};
+```
+</details>
+
+<details>
+    
+<summary>I/O Store TOC header</summary>
+    
+```cpp
+struct FIoStoreTocHeader
+{
     static constexpr char TocMagicImg[] = "-==--==--==--==-";
 
     uint8	TocMagic[16];
@@ -26,5 +65,7 @@
     uint64	PartitionSize = 0;
     uint32	TocChunksWithoutPerfectHashCount = 0;
     uint32	Reserved7 = 0;
-    uint64	Reserved8[5] = \{ 0 \};
-    ```
+    uint64	Reserved8[5] = { 0 };
+};
+```
+</details>
