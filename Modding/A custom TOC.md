@@ -9,9 +9,7 @@
 <ul>
   <li><a href="https://github.com/4sval/FModel">FModel</a></li>
   <li><a href="https://mh-nexus.de/en/hxd/">HxD</a> or any hex editor</li>
-  <li>My <a href="https://mh-nexus.de/en/hxd/">Offset Grabber</a> (or make your own)</li>
+  <li>My <a href="https://google.com?q=making a repo soon">Offset Grabber</a> (or make your own)</li>
   <li>A brain</li>
   <li>A lot of patience</li>
 </ul>
-
-<p><b>TODO... please be patience</b></p>
