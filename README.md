@@ -21,7 +21,7 @@
 <h3>The UTOC</h3>
 <p>Anyway, the step after the bytes are allocated, is to actually write the data. I’ve already explained most of what a ucas is used for, however it is time to explain how a utoc works.</p>
 
-<p>Basically a utoc (I/O dispatcher) is used as a list of pointers, containing both the size and offset of the data inside of the I/O container, virtually that's all it's used for, but because they overcomplicate it, I have to explain more.</p>
+<p>Basically a utoc (I/O dispatcher) is used as a list of pointers, containing both the size and offset of the data inside of the I/O container, virtually that's all it's used for, but because they overcomplicate it, so I'll have to explain more.</p>
 
 <h4>What's in the UTOC?</h4>
 <p>Inside of the utoc, starting at offset zero, we have the header, the first part of the header contains a file magic declaration to insure that what Unreal Engine is reading is in fact a I/O store file (not just named `.utoc`). This header also contains the version of the I/O store system (I’m gonna refer to this as <b>I/O-SS</b> from now on), and much more that I'll talk about in the subpages.</p>
